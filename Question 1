@@ -1,0 +1,7 @@
+Question 1
+
+a) $ awk '$2 < 1000 { print $1,$2 }' expression.tab
+
+b) $awk -F"\t" 'NR == 1 {print; next} $2~/ase/ {print $1,$2,$3}' annotation.tab
+
+c) $awk -F"\t" 'NR == 1 {print; next} $3~/(Purine|Pyrimidine) biosynthesis/ {print $1,$2,$3}' annotation.tab
