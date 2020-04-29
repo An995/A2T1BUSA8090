@@ -1,0 +1,13 @@
+Question 3
+
+library(tidyverse)
+coviddata=read.csv(file = "E:/busa8090/coviddata.csv")
+
+
+ggplot(data = coviddata, aes(reorder(country,deaths.per.100k), deaths.per.100k))+
+  geom_col(fill="navy blue")+
+    theme(panel.background = element_blank())+
+  theme(panel.grid.major.x = element_line(color = "light blue"))+
+  coord_flip(clip = "off", expand = FALSE)+
+  guides(fill = FALSE)+
+  labs(title =" CoVID- 19 Deaths",subtitle = " deaths per 100,000 population ", y = "Deaths per 100 k", x="Country")
