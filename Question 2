@@ -1,0 +1,19 @@
+Question 2
+
+a)
+•	$wget https://downloads.mysql.com/docs/world_x-db.zip 
+•	$ sudo apt-get unzip       
+•	unzip world_x-db.zip       
+•	$ sudo mysql                     
+•	mysql> create database world_x;    
+•	mysql> source world_x-db/world_x.sq       
+•	mysql> show tables ;
+
+
+
+b)
+mysql> select y.name as country,z.name as capital,x.percentage from
+    -> countrylanguage x join country y on
+    -> x.countrycode=y.code join city z on
+    -> y.capital=z.id
+    -> where x.percentage>50 and x.language="English";
